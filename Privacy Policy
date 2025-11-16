@@ -1,0 +1,127 @@
+# Privacy Policy for Sunset Compass
+
+**Last Updated**: January 2025
+
+## Introduction
+
+Sunset Compass ("we," "our," or "us") operated by Benjamin Harris is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
+
+## Information We Collect
+
+### Location Data
+- **What We Collect**: Your device's precise GPS location (latitude and longitude)
+- **Why We Collect It**: To calculate accurate sunset and sunrise times and directions based on your current position
+- **How We Use It**: 
+  - Calculate sun position and azimuth
+  - Display compass directions
+  - Show sun path on map
+  - Save location pins (stored locally on your device)
+- **Storage**: Location data is processed in real-time and saved pins are stored only on your device
+- **Third-Party Sharing**: We do NOT share your location with third parties
+
+### Device Information
+- **What We Collect**: Device type, operating system version
+- **Why We Collect It**: To ensure app compatibility and proper functionality
+- **How We Use It**: Technical diagnostics and app optimization
+
+### Advertising Data
+- **What We Collect**: Advertising identifier, device information
+- **Why We Collect It**: To display advertisements through Google AdMob
+- **Third-Party Partners**: Google AdMob
+- **How to Opt-Out**: You can limit ad tracking in your device settings (iOS: Settings > Privacy & Security > Tracking)
+
+## How We Use Your Information
+
+We use the information we collect to:
+1. Calculate sunset and sunrise times for your location
+2. Display sun direction on the compass
+3. Show sun path overlay on maps
+4. Save your favorite locations (locally on your device)
+5. Improve app performance and user experience
+6. Display relevant advertisements through Google AdMob
+
+## Data Storage and Security
+
+- **Local Storage**: All saved locations are stored locally on your device using AsyncStorage
+- **No Cloud Sync**: We do NOT store your data on our servers
+- **No User Accounts**: The app does not require or support user accounts
+- **Security**: We implement industry-standard security measures to protect your data
+
+## Third-Party Services
+
+We use the following third-party services:
+
+### Google Maps
+- **Purpose**: Display map and location
+- **Data Shared**: Your location for map display
+- **Privacy Policy**: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+
+### Google AdMob
+- **Purpose**: Display advertisements
+- **Data Shared**: Device advertising ID, device information
+- **Privacy Policy**: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+- **Note**: We do not share any of your data with Google AdMob. However, Google AdMob may collect and use data for advertising purposes according to their own privacy policy. Any data collection by Google AdMob is independent of our app and is governed by Google's privacy policy, not ours.
+- **Opt-Out**: You can limit ad tracking in your device Settings > Privacy & Security > Tracking
+
+## Your Rights and Choices
+
+You have the right to:
+- **Access**: View what data we process
+- **Deletion**: Delete saved location pins through the app settings
+- **Location Permission**: Enable or disable location access in device settings
+- **Advertising**: Limit ad tracking in device settings (iOS: Settings > Privacy & Security > Tracking)
+
+## Children's Privacy
+
+Sunset Compass is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.
+
+## Location Permission
+
+- **Permission Type**: "When In Use" location access
+- **Required**: Yes, the app cannot function without location data
+- **Background Access**: We do NOT access your location in the background
+- **Frequency**: Only when the app is actively in use
+
+## Data Retention
+
+- **Location Data**: Processed in real-time, not stored on servers
+- **Saved Pins**: Stored locally until you delete them
+- **App Deletion**: All data is permanently deleted when you uninstall the app
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any changes by:
+- Updating the "Last Updated" date
+- Posting the new policy in the app
+
+## Contact Us
+
+If you have questions about this Privacy Policy, please contact us:
+
+**Benjamin Harris**  
+- **Email**: [YOUR EMAIL - UPDATE THIS]
+- **Website**: [YOUR WEBSITE - UPDATE THIS IF APPLICABLE]
+
+## Legal Basis (GDPR - If applicable)
+
+For users in the European Economic Area (EEA):
+- **Consent**: We process location data with your explicit consent
+- **Legitimate Interest**: We process device data for app functionality
+- **Right to Withdraw**: You can withdraw consent by disabling location in settings
+
+## California Privacy Rights (CCPA - If applicable)
+
+California residents have the right to:
+- Know what personal information is collected
+- Delete personal information
+- Opt-out of the sale of personal information (we do NOT sell data)
+
+---
+
+## Summary
+
+**What we collect**: Your location (GPS coordinates), device information, advertising identifier  
+**Why we collect it**: To show sunset/sunrise times and directions, display advertisements  
+**Where it's stored**: Locally on your device only (location data), Google AdMob may collect advertising data  
+**Who we share with**: Only Google Maps (for displaying maps) and Google AdMob (for advertisements)  
+**Your control**: You can delete saved locations anytime, disable location in settings, limit ad tracking, or uninstall the app
