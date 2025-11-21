@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "W3MMJ9J3TG.com.sunpath.sunsetcompass",
+        "paths": [ "/pin/*" ]
+      }
+    ]
+  }
+}
