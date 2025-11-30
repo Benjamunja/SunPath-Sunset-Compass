@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="" id="og-url">
+    <meta property="og:title" content="Golden Hour Sunset Compass - Shared Location">
+    <meta property="og:description" content="Check out this photography location shared from Golden Hour Sunset Compass">
+    <meta property="og:image" content="https://SunPath-Sunset-Compass.github.io/SunPath%20Sunset%20Compass%20Logo.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Golden Hour Sunset Compass - Shared Location">
+    <meta name="twitter:description" content="Check out this photography location shared from Golden Hour Sunset Compass">
+    <meta name="twitter:image" content="https://SunPath-Sunset-Compass.github.io/SunPath%20Sunset%20Compass%20Logo.png">
+    
+    <title>Golden Hour Sunset Compass - Shared Location</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            border-radius: 26px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #FF6B35;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.3s;
+            margin: 10px;
+        }
+        
+        .button:hover {
+            background: #ff8555;
+        }
+        
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .button-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .loading {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🌅</div>
+        <h1>Golden Hour Sunset Compass</h1>
+        <p>This location was shared from the Golden Hour Sunset Compass app.</p>
+        <p>Open the app to view this location on the map and save it to your pins.</p>
+        
+        <div>
+            <a href="#" id="app-link" class="button">Open in App</a>
+            <a href="https://apps.apple.com/us/app/golden-hour-sunset-compass/id6755098089" class="button button-secondary" target="_blank">Download App</a>
+        </div>
+        
+        <p class="loading">Redirecting...</p>
+    </div>
+    
+    <script>
+        // Extract pin data from URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const lat = urlParams.get('lat');
+        const lon = urlParams.get('lon');
+        const name = urlParams.get('name') || 'Shared Location';
+        const category = urlParams.get('category') || 'sunset';
+        const notes = urlParams.get('notes') || '';
+        
+        // Update Open Graph meta tags with pin data
+        if (name && name !== 'Shared Location') {
+            document.querySelector('#og-url').setAttribute('content', window.location.href);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', `${name} - Golden Hour Sunset Compass`);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', `Check out this ${category} location: ${name}`);
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', `${name} - Golden Hour Sunset Compass`);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', `Check out this ${category} location: ${name}`);
+            document.title = `${name} - Golden Hour Sunset Compass`;
+        }
+        
+        // Build app deep link (fallback to custom scheme if Universal Link doesn't work)
+        const appLink = `sunsetcompass://pin?lat=${lat}&lon=${lon}${name ? '&name=' + encodeURIComponent(name) : ''}${category ? '&category=' + category : ''}${notes ? '&notes=' + encodeURIComponent(notes) : ''}`;
+        
+        // Set app link button
+        document.getElementById('app-link').href = appLink;
+        
+        // Try to open app immediately (Universal Link will handle this if app is installed)
+        // If app is not installed, user stays on this page and can download
+        setTimeout(() => {
+            window.location.href = appLink;
+        }, 500);
+        
+        // Fallback: If Universal Link doesn't work, show download button after 2 seconds
+        setTimeout(() => {
+            document.querySelector('.loading').textContent = 'Don\'t have the app? Download it from the App Store.';
+        }, 2000);
+    </script>
+</body>
+</html>
+
