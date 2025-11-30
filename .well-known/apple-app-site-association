@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "W3MMJ9J3TG.com.sunpath.sunsetcompass",
-        "paths": [ "/pin/*" ]
+        "paths": [ "/SunPath-Sunset-Compass/pin/*" ]
       }
     ]
   }
