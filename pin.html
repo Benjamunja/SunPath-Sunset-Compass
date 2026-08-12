@@ -7,17 +7,17 @@
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="" id="og-url">
-    <meta property="og:title" content="Golden Hour Sunset Compass - Shared Location">
-    <meta property="og:description" content="Check out this photography location shared from Golden Hour Sunset Compass">
-    <meta property="og:image" content="https://SunPath-Sunset-Compass.github.io/SunPath%20Sunset%20Compass%20Logo.png">
+    <meta property="og:title" content="SpotGenic - Shared Location">
+    <meta property="og:description" content="Check out this photography location shared from SpotGenic">
+    <meta property="og:image" content="https://benjamunja.github.io/SunPath-Sunset-Compass/icon.png">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Golden Hour Sunset Compass - Shared Location">
-    <meta name="twitter:description" content="Check out this photography location shared from Golden Hour Sunset Compass">
-    <meta name="twitter:image" content="https://SunPath-Sunset-Compass.github.io/SunPath%20Sunset%20Compass%20Logo.png">
+    <meta name="twitter:title" content="SpotGenic - Shared Location">
+    <meta name="twitter:description" content="Check out this photography location shared from SpotGenic">
+    <meta name="twitter:image" content="https://benjamunja.github.io/SunPath-Sunset-Compass/icon.png">
     
-    <title>Golden Hour Sunset Compass - Shared Location</title>
+    <title>SpotGenic - Shared Location</title>
     
     <style>
         * {
@@ -105,8 +105,8 @@
 <body>
     <div class="container">
         <div class="logo">🌅</div>
-        <h1>Golden Hour Sunset Compass</h1>
-        <p>This location was shared from the Golden Hour Sunset Compass app.</p>
+        <h1>SpotGenic</h1>
+        <p>This location was shared from the SpotGenic app.</p>
         <p>Open the app to view this location on the map and save it to your pins.</p>
         
         <div>
@@ -129,14 +129,19 @@
         // Update Open Graph meta tags with pin data
         if (name && name !== 'Shared Location') {
             document.querySelector('#og-url').setAttribute('content', window.location.href);
-            document.querySelector('meta[property="og:title"]').setAttribute('content', `${name} - Golden Hour Sunset Compass`);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', `${name} - SpotGenic`);
             document.querySelector('meta[property="og:description"]').setAttribute('content', `Check out this ${category} location: ${name}`);
-            document.querySelector('meta[name="twitter:title"]').setAttribute('content', `${name} - Golden Hour Sunset Compass`);
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', `${name} - SpotGenic`);
             document.querySelector('meta[name="twitter:description"]').setAttribute('content', `Check out this ${category} location: ${name}`);
-            document.title = `${name} - Golden Hour Sunset Compass`;
+            document.title = `${name} - SpotGenic`;
         }
         
         // Build app deep link (fallback to custom scheme if Universal Link doesn't work)
+        // TODO: switch to 'spotgenic://' once the SpotGenic build (with the new scheme registered
+        // in app.config.js) has actually shipped and most installs have updated. Currently-installed
+        // builds only have 'sunsetcompass://' registered at the OS level — switching this now would
+        // break the fallback for every user still on the pre-rename build. Do not flip until confirmed
+        // the new scheme is live and adopted (see cursor-prompt-pineapple-fixes.md "Spotted, not fixed").
         const appLink = `sunsetcompass://pin?lat=${lat}&lon=${lon}${name ? '&name=' + encodeURIComponent(name) : ''}${category ? '&category=' + category : ''}${notes ? '&notes=' + encodeURIComponent(notes) : ''}`;
         
         // Set app link button
@@ -155,4 +160,3 @@
     </script>
 </body>
 </html>
-
